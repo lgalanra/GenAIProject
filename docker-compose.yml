@@ -3,12 +3,12 @@ version: '3'
 services:
   backend:
     build:
-      context: ./backend
-    ports:
-      - "8000:8000"
+      context: ./backend    # Ruta al directorio del backend
+      dockerfile: Dockerfile  # Nombre del archivo Dockerfile si es diferente al estándar
 
   frontend:
     build:
-      context: ./frontend
+      context: ./frontend   # Ruta al directorio del frontend
+      dockerfile: Dockerfile  # Nombre del archivo Dockerfile si es diferente al estándar
     ports:
-      - "8501:8501"
+      - "8501:8501"  # Puerto de exposición del frontend
