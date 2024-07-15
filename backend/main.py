@@ -14,6 +14,7 @@ class Question(BaseModel):
 def read_root():
     return {"message": "Welcome to the Gen AI RAG Application"}
 
+
 @app.post("/ask/")
 def ask_question(question: Question):
     query = question.question
